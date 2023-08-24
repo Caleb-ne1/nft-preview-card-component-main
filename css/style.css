@@ -1,0 +1,172 @@
+:root {
+
+    /* primary */
+--Soft-blue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);
+    
+    /* neutral */
+--Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+--Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+--Very-dark-blue-line: hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+
+body {
+    line-height: 1;
+    height: 100%;
+    background-color: var(--Very-dark-blue-main-BG);
+    color: var(--Soft-blue);
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+p,
+h1 {
+    overflow-wrap: break-word;
+}
+
+
+.product {
+    background-color: var(--Very-dark-blue-card-BG);
+    padding: 1rem;
+    max-width: 300px;
+    border-radius: 0.7rem;
+    /* margin-top: 3rem; */
+}
+.product-image {
+    position: relative;
+}
+
+.product-image img {
+    border-radius: 10px;
+}
+
+.view {
+    position: absolute;
+    top: 0;
+    background-color: hsl(178, 100%, 50%, 0.6);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.view img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, -20%);   
+}
+
+.view:hover {
+    opacity: 1;
+    cursor: pointer;
+
+
+}
+
+.product-title {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--White);
+    font-weight: 600;
+}
+.product-title:hover,
+.product-title:active {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+p {
+    font-weight: 300;
+}
+.line {
+    border: 1px solid;
+    color: var(--Very-dark-blue-line);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    width: 295px;
+}
+
+.flex-group {
+    display: flex;
+    gap: 6.3rem;
+    padding-top: 1.5rem;
+}
+
+.ethereum,
+.days-left { 
+    display: flex;
+}
+.ethereum {
+    color: var(--Cyan);
+}
+
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+
+}
+.name {
+    color: var(--White);
+}
+.name:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.image {
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--White);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    margin-top: 1rem;
+ }
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 600px) {
+
+    .product {
+       min-width: 250px;
+    }
+
+    .flex-group {
+        display: flex;
+        gap: 6rem;
+        
+    }
+}
